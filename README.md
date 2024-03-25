@@ -27,3 +27,7 @@ The UI component is responsible for rendering the chessboard and handling user i
 - Vanilla JavaScript
 - HTML
 - CSS
+
+## Credits
+
+The user interface for this project was adapted from a CodePen project created by [jhasuev](https://codepen.io/jhasuev/pen/pdByoK). Modifications were made to suit the requirements of this application.
