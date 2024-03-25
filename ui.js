@@ -57,6 +57,11 @@ export default class UI {
       this.#highlightKnightPath();
     });
   }
+  #renderTextPath(path){
+    const textPath = this.#convertNumbersToLetters(path);
+    const textElement = document.querySelector(".text-path");
+    textElement.textContent = textPath;
+  }
   #calcualteKnightPath() {
     console.log(this.#selectedSquares);
     const board = new ChessBoard();
@@ -67,9 +72,26 @@ export default class UI {
     // console.log(path)
     return path;
   }
+  #convertNumbersToLetters(path) {
+    const map = {
+      1: "A",
+      2: "B",
+      3: "C",
+      4: "D",
+      5: "E",
+      6: "F",
+      7: "G",
+      8: "H",
+    };
+
+    const arr = path.map((square)=>` ${square[0]+1}${map[square[1]+1]} `);
+    return arr.join(" => ");
+  }
   #highlightKnightPath() {
     if (this.selectedSquares.length === 2) {
-      const squares = document.querySelectorAll(".chess__board-element-wrapper");
+      const squares = document.querySelectorAll(
+        ".chess__board-element-wrapper"
+      );
       for (let square of squares) {
         if (square.classList.contains("path")) {
           square.classList.remove("path");
@@ -77,7 +99,7 @@ export default class UI {
       }
 
       const path = this.#calcualteKnightPath();
-      
+
       for (let i = 1; i < path.length - 1; i++) {
         const square = path[i];
         const element = document.querySelector(
@@ -85,6 +107,7 @@ export default class UI {
         );
         element.classList.add("path");
       }
+      this.#renderTextPath(path);
     }
   }
 }

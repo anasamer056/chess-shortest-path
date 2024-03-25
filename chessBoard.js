@@ -4,7 +4,7 @@ export default class ChessBoard {
     #MAX_BOARD_SIZE = 7; 
 
     #possibleMoves = [[2, 1], [-2, 1], [2, -1], [-2, -1], [1, -2], [1, 2], [-1, -2], [-1, 2]]
-
+    
     calculateMoves(start, dest){
         let visitedSquares = [];
 
@@ -35,6 +35,7 @@ export default class ChessBoard {
             }
         }
     }
+
 
     #isFinalMove(move, dest){
         if (move[0] === dest[0] && move[1] === dest[1]) return true;
