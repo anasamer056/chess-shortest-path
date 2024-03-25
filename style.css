@@ -17,6 +17,7 @@ p {
   margin-bottom: 10px;
 }
 
+
 .main {
   max-width: 45vw;
   margin-left: 25vw;
@@ -113,3 +114,23 @@ p {
 }
 
 /*# sourceMappingURL=style.css.map */
+.selected {
+  background-color: rgb(111, 18, 18);
+}
+/* .selected::before {
+  content: "X";
+  color: white;
+} */
+.chess__board-row:nth-of-type(2n) .chess__board-element:nth-of-type(2n) .selected, .chess__board-row:nth-of-type(2n+1) .chess__board-element:nth-of-type(2n+1) .selected {
+  background-color: rgb(240, 126, 126)
+}
+
+/* .chess__board-row:nth-of-type(2n) .chess__board-element:nth-of-type(2n) .selected::before{
+  content: "X";
+  color: black;
+}
+
+.chess__board-row:nth-of-type(2n+1) .chess__board-element:nth-of-type(2n+1) .selected::before {
+  content: "X";
+  color: black;
+} */
