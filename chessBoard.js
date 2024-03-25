@@ -2,7 +2,6 @@ import Queue from "./queue.js";
 
 export default class ChessBoard {
     #MAX_BOARD_SIZE = 7; 
-    #MIN_BOARD_SIZE = 0;
 
     #possibleMoves = [[2, 1], [-2, 1], [2, -1], [-2, -1], [1, -2], [1, 2], [-1, -2], [-1, 2]]
 
