@@ -1,0 +1,13 @@
+{
+  "name": "chess-shortest-path",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "anas-amer <anasamer056@gmail.com>",
+  "license": "ISC",
+  "description": ""
+}
