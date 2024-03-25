@@ -69,13 +69,21 @@ export default class UI {
   }
   #highlightKnightPath() {
     if (this.selectedSquares.length === 2) {
+      const squares = document.querySelectorAll(".chess__board-element-wrapper");
+      for (let square of squares) {
+        if (square.classList.contains("path")) {
+          square.classList.remove("path");
+        }
+      }
+
       const path = this.#calcualteKnightPath();
       
-      for (let sqaure of path) {
+      for (let i = 1; i < path.length - 1; i++) {
+        const square = path[i];
         const element = document.querySelector(
-          `[data-x="${sqaure[0]}"][data-y="${sqaure[1]}"]`
+          `[data-x="${square[0]}"][data-y="${square[1]}"]`
         );
-        element.classList.add("selected");
+        element.classList.add("path");
       }
     }
   }
