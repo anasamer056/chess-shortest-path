@@ -84,6 +84,10 @@ p {
 }
 
 @media only screen and (max-width: 720px) {
+  .main {
+    max-width: 80vw;
+    margin-left: 10vw;
+  }
   .chess {
     font-size: 15px;
     padding: 30px;
@@ -102,6 +106,10 @@ p {
   }
 }
 @media only screen and (max-width: 480px) {
+  .main {
+    max-width: 80vw;
+    margin-left: 10vw;
+  }
   .chess {
     font-size: 12px;
     padding: 20px;
